@@ -12,7 +12,7 @@ export default function Home() {
           <Image
             src="/images/blue-imposter.png"
             alt="alt"
-            width={200}
+            width={210}
             height={300}
           />
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Blue Imposter</p>
