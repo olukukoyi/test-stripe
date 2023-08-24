@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { checkout } from "../../checkout";
 
 export default function Home() {
   return (
@@ -16,6 +19,20 @@ export default function Home() {
             height={300}
           />
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Blue Imposter</p>
+          <button
+            onClick={() => {
+              checkout({
+                lineItems: [
+                  {
+                    price: "price_1Ni1stHekDTsDdF9vBlWq7rK",
+                    quantity: 1,
+                  },
+                ],
+              });
+            }}
+          >
+            buy!
+          </button>
         </a>
 
         <a
@@ -29,6 +46,20 @@ export default function Home() {
             height={300}
           />
           <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>Red imposter</p>
+          <button
+            onClick={() => {
+              checkout({
+                lineItems: [
+                  {
+                    price: "price_1Ni1rvHekDTsDdF9HmTqQlqM",
+                    quantity: 1,
+                  },
+                ],
+              });
+            }}
+          >
+            buy!
+          </button>
         </a>
       </div>
     </main>
